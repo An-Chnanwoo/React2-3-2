@@ -5,9 +5,9 @@
 ## 0831(1주차)
 
 ## 작성코드
-  - 해당 날짜 실습 없음
+#### 해당 날짜 실습 없음
 
-### 학습내용
+## 학습내용
 ### Chapter Next.js
 - 코드 분할(Splitting): 페이지를 로딩 할 때 번들을 여러 조각으로 나누어 필요한 부분만 전송하는 방식
 - 서버 사이트 렌더링
@@ -26,5 +26,15 @@
   - CRA와 유사하게 프로젝트를 구성 가능(create-razzle-app)
   - React, Preact, Reason-React, Angular 및 Vue와 함께 사용 가능
 
-[Next.js]
+[Nuxt.js]
   - Vue를 사용한 웹 애플리케이션 개발에서 리액트의 Next.js에 해당하는 프레임워크
+
+[Angular Universal]
+  - 정적 사이트 생성과 서버 사이드 렌더링을 지원
+  - Nuxt나 Next와는 달리 대기업인 구글에서 만듬
+  - Angular로 개발하는 경우 Angular Universal을 사용함
+  - 
+#### 1.4 왜 Next.js일까?
+  - React에서 제공하지 않는 여러 기능 지원
+  - 설정이나 개발 옵션 등 다양한 부분에서 유용한 기능 제공
+  - 활동적인 커뮤니티가 있어 개발 단계별로 많은 지원을 받을 수 있음
