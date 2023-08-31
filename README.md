@@ -59,4 +59,16 @@
   - 설치 node 버전 확인 ( node -v )
   - 설치 npm 버전 확인 ( npm -v )
 
+NVM으로 NODE의 버전 관리
+  - NVM(Node.js version manager)은 Node의 version을 관리해 주는 틀
+
+nvm의 주요 명령어
+  - list or ls (설치되어 있는 node리스트 확인)
+  - nvm install 16.16.0 // 16.16.0 버전 설치
+  - nvm install latest // latest currn\ent version 설치
+  - nvm install lts    // LTS version 설치
+  - Uninstall          // node 삭제
+  - use                // 사용할 node 버전 선택
+  - current            // 사용중인 버전 확인
+
 
