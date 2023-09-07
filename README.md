@@ -6,6 +6,14 @@
 
 ## 작성코드
 
+### .babelrc
+```js
+  {
+    "presets":["next/babel"]
+    
+  }
+```
+
 ### tsconfig.json 자동추가
   - REACT2-3-2 -> test2 -> tsconfig.json추가
 
