@@ -17,8 +17,8 @@
   - npx create-next-app<app-name>
 
 프로젝트 실행
-  - npm ren dev
-  
+  - npm run dev
+
 ## 0831(1주차)
 
 ## 작성코드
