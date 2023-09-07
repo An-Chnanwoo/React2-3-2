@@ -12,6 +12,10 @@
   - Next.js눈 react-router와 다른 라이브러리인 page/ 디렉토리 사용
   - pasges/ 디렉토리 안의 모든 js파일은 public 페이지
   - 프로젝트 실행 http://localhost:3000 접속 확인
+  - public/ 디렉토리에는 퍼블릭 페이지와 정적 콘텐츠가 있음 (이미지, css, js등)
+  - styles/ 디렉토리에는 앱에서 사용하는 스타일시트 넣는다(반드시 필요한 것은 아님)
+  - .next, node_modules 지우면 안됨, 단 상황에 따라 styles 디렉토리는 삭제 가능
+  - 정해진 용도 디렉토리는 pages와 public
 
 프로젝트 생성
   - npx create-next-app<app-name>
