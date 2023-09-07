@@ -6,7 +6,14 @@
 
 ## 작성코드
 
+#### tsconfig.json 자동추가
+  - REACT2-3-2 -> test2 -> tsconfig.json추가
+  
 ## 학습내용
+
+#### 타입스크립트 지원
+  - Next.js는 고품질의 type definition 지원
+  - 설정 임의 변경 주의사항 p28
 
 #### 프로젝트 기본 구조
   - Next.js눈 react-router와 다른 라이브러리인 page/ 디렉토리 사용
