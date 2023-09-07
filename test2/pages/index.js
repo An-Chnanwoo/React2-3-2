@@ -41,7 +41,14 @@ export default function Home() {
 
         <div className={styles.center}>
           <h1>안찬우</h1>
-          
+          <Image
+            className={styles.logo}
+            src="/next.svg"
+            alt="Next.js Logo"
+            width={180}
+            height={37}
+            priority
+          />
         </div>
 
         <div className={styles.grid}>
