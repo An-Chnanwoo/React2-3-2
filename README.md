@@ -6,9 +6,9 @@
 
 ## 작성코드
 
-#### tsconfig.json 자동추가
+### tsconfig.json 자동추가
   - REACT2-3-2 -> test2 -> tsconfig.json추가
-  
+
 ## 학습내용
 
 #### 타입스크립트 지원
