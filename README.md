@@ -8,6 +8,17 @@
 
 ## 학습내용
 
+#### 프로젝트 기본 구조
+  - Next.js눈 react-router와 다른 라이브러리인 page/ 디렉토리 사용
+  - pasges/ 디렉토리 안의 모든 js파일은 public 페이지
+  - 프로젝트 실행 http://localhost:3000 접속 확인
+
+프로젝트 생성
+  - npx create-next-app<app-name>
+
+프로젝트 실행
+  - npm ren dev
+  
 ## 0831(1주차)
 
 ## 작성코드
