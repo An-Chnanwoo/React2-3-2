@@ -46,7 +46,7 @@
   - 여러 개의 컴포넌트로 구성된 페이지 개발 시 하나의 번들로 합침
   - 만일 SASS나 LESS같은 CSS 전처리기를 사용해서 개발 하면 웹팩 설정을 수정
   - SASS > LESS (SASS메인)
-
+  
 프로젝트 생성
   - npx create-next-app<app-name>
 
