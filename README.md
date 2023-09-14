@@ -8,6 +8,9 @@
 
 ## 학습내용
 
+#### SWC 프로젝트 적용법
+  - npx create-next-app@latest my-app
+
 #### 왜 SWC(Speedy Web Compiler)를 사용해야 하는가?
 [Babel의 단점]
   - Babel로 변환된 코드를 이해하기 어렵다.
