@@ -8,6 +8,13 @@
 
 ## 학습내용
 
+#### Transpile
+  - TypeScript를 이전 버전의 코드로 변환시켜주는 도구
+  - 개발자가 작성한 코드 -> Parse -> Transform -> Generate -> 이전 버전의 코드
+  - Babel의 parser는 Abstract SyntaxTree(AST)로 변환하는 역할
+  - Babel의 traverse모듈은 전체 트리 상태(AST)를 유지하며 노드 교체, 제거, 추가 담당
+  - 마지막 generator가 수정된 AST를 일반 코드로 변환
+
 ## 0907(2주차)
 
 ## 작성코드
