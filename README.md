@@ -6,6 +6,46 @@
 
 ## 작성코드
 
+### components -> navbar.js
+```js
+import styles from '@/styles/Home.module.css'
+
+function navbar(){
+    <div className={styles.navbar}>
+        <a href='./'>Home</a> | 
+        <a href='./Chapter2_1'>Chapter2_1</a> | 
+        <a href='./Chapter2_2'>Chapter2_2</a> | 
+    </div>
+}
+
+export default navbar;
+```
+
+### index.js
+
+```js
+  <div className={styles.navbar}>
+    <a href='./'>Home</a> | 
+    <a href='./Chapter2_1'>Chapter2_1</a> | 
+    <a href='./Chapter2_2'>Chapter2_2</a> | 
+  </div>
+  // Home, Chapter2_1, Chapter2_2 추가
+```
+
+### Home.module.css
+```js 
+.navbar {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
+  width: 50%;
+}
+// navbar라는 모듈함수 추가
+```
+
 ## 학습내용
 
 #### SWC 프로젝트 적용법
