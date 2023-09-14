@@ -8,6 +8,17 @@
 
 ## 학습내용
 
+### 왜 SWC(Speedy Web Compiler)를 사용해야 하는가?
+[Babel의 단점]
+  - Babel로 변환된 코드를 이해하기 어렵다.
+  - 원 코드에 비해 변환 코드의 길이가 늘어난다.
+  - 변환에 시간이 많이 걸린다.
+
+[SWC의 장점]
+  - Next12이후 별도의 설정 없이 SWC를 사용 가능(Next.js에 내장)
+  - Rust의 WASW(WebAssembly) 지원으로 다양한 플랫폼에서도 Next JS개발 가능
+  - 변환 시간 빠름
+  - 커뮤니티의 성장으로 도움 받기 쉬움
 ### Transpile
   - TypeScript를 이전 버전의 코드로 변환시켜주는 도구
   - 개발자가 작성한 코드 -> Parse -> Transform -> Generate -> 이전 버전의 코드
