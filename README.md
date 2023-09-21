@@ -31,12 +31,22 @@ export default IndexPage;
 
 ### Chapter2 렌더링 전략
 
+#### 2.2.2 CSR을 사용할 때의 이점
+  - 네이티브 앱처럼 느껴지는 웹 앱
+  - 쉬운 페이지 전환
+  - 지연된 로딩과 성능
+  - 서버 부하 감소
+
+#### 2.2.1 클라이언트 사이드 렌더링(CSR)
+  - React 앱을 실행하면 렌더링 시작전 빈 화면 유지
+  - 이는 서버에서 스크립트를 사용하기 위한 것
+
 #### getServerSideProps
   1. getServerSideProps라는 비동기 함수를 export
   2. getServerSideProps 함수는 props라는 속성값을 갖는 객체를 변환
   3. IndexPage 함수를 수정해서 props의 모든 내용을 갖음
 
-  * componets안에 index파일 없이 실행 불가능 - pages안에서는 실행가능
+  ## * componets안에 index파일 없이 실행 불가능 - pages안에서는 실행가능
 
 #### [SSR이 최적의 렌더링 전략이 아닌 경우]
   - 클라이언트가 페이지를 요청할 때마다 페이지를 다시 렌더링할 수 있는 서버가 필요
