@@ -6,6 +6,35 @@
 
 ## 작성코드
 
+#### Highlight.js
+```js
+const { default: Head } = require("next/head");
+const { useRouter } = require("next/router");
+const { useEffect } = require("react");
+
+function Highlight({code, laguge = 'js'}){
+    const {asPath} = useRouter();
+
+    useEffect(() => {
+        hljs.registerLanguage('javascript', javascript);
+        hljs.initHighlighting();
+    }, [asPath]);
+
+    return (
+        <>
+            <Head>
+                <link rel="stylesheet" href="@highlight.css"/>
+            </Head>
+            <pre>
+                <code className={laguge}></code>
+            </pre>
+        </>
+    );
+}
+
+export default Highlight;
+```
+
 #### getServerSideProps.js
 ```js
 export async function getServerSideProps() {
@@ -30,6 +59,10 @@ export default IndexPage;
 ## 학습내용
 
 ### Chapter2 렌더링 전략
+
+#### process.browser
+  - process.browser값에 따라서 스크립트와 컴포넌트를 조건별로 실행
+  - 코드를 클라이언트에서 실행하면 true, 서버에서는 false 값을 가짐
 
 #### React.useEffect Hook
   - 최근 리액트는 life cycle함수 대신 Hook사용
