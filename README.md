@@ -46,7 +46,7 @@ export default IndexPage;
   2. getServerSideProps 함수는 props라는 속성값을 갖는 객체를 변환
   3. IndexPage 함수를 수정해서 props의 모든 내용을 갖음
 
-  ## * componets안에 index파일 없이 실행 불가능 - pages안에서는 실행가능
+  ### * componets안에 index파일 없이 실행 불가능 - pages안에서는 실행가능
 
 #### [SSR이 최적의 렌더링 전략이 아닌 경우]
   - 클라이언트가 페이지를 요청할 때마다 페이지를 다시 렌더링할 수 있는 서버가 필요
