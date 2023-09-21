@@ -31,6 +31,11 @@ export default IndexPage;
 
 ### Chapter2 렌더링 전략
 
+#### getServerSideProps
+  1. getServerSideProps라는 비동기 함수를 export
+  2. getServerSideProps 함수는 props라는 속성값을 갖는 객체를 변환
+  3. IndexPage 함수를 수정해서 props의 모든 내용을 갖음
+
 #### [SSR이 최적의 렌더링 전략이 아닌 경우]
   - 클라이언트가 페이지를 요청할 때마다 페이지를 다시 렌더링할 수 있는 서버가 필요
   - 다른 방식에 비해 SSR이 더 많은 자원 소모, 더 많은 부하로 인해 유지 보수 비용 증가

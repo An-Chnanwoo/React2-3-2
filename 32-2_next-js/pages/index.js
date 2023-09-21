@@ -3,8 +3,11 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Navbar from './components/navbar'
-
+import { getServerSideProps } from './getServerSideProps'
 const inter = Inter({ subsets: ['latin'] })
+
+
+
 
 export default function Home() {
   return (
@@ -18,7 +21,8 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         
         <Navbar />
-
+        <getServerSideProps />
+        
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
@@ -42,6 +46,9 @@ export default function Home() {
             </a>
           </div>
           
+          {/* <div className={styles.getServerSideProps}>
+            <div>Welcome, {props.user.owner.login}!</div>;
+          </div> */}
         </div>
       </main>
     </>
