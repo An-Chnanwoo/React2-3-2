@@ -31,6 +31,10 @@ export default IndexPage;
 
 ### Chapter2 렌더링 전략
 
+#### React.useEffect Hook
+  - 최근 리액트는 life cycle함수 대신 Hook사용
+  - DOM조작이나 데이터 불러오기 등 사이드 이펙트 기능 구현할 시 useEffect함수를 사용해 마운트 된 후 실행
+
 #### 2.2.2 CSR을 사용할 때의 이점
   - 네이티브 앱처럼 느껴지는 웹 앱
   - 쉬운 페이지 전환
