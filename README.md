@@ -8,7 +8,12 @@
 
 ## 학습내용
 
-#### 기본라우팅
+#### 동적 라우팅
+  - /pages/post/[slug].js 파일 생성 후 useRouter를 사용하면 파라메터 사용가능
+  - 대괄호는 반드시 사용, slug는 pid, category등 원하는 것을 넣음
+  - useRouter 훅을 통해 router 정보를 불러오거나, router.query내에 설정한 변수와 변수 값 확인 가능
+
+#### 기본 라우팅
   //일반적인 경로
   - pages/index.js 
     - localhost:3000/
@@ -18,7 +23,7 @@
   //중첩라우팅
   - pages/blog/first-post.js
     - localhost:3000/blog/first-post
-    
+
 ### Chapter 3 기초와 내장 컴포넌트
 
 #### 3.1 라우팅 시스템
