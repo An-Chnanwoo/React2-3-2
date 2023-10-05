@@ -9,9 +9,15 @@
 ## 학습내용
 
 #### 기본라우팅
-  - pages/index.js
+  //일반적인 경로
+  - pages/index.js 
     - localhost:3000/
-
+  - pages/blog/index.js
+    - localhost:3000/blog
+  
+  //중첩라우팅
+  - pages/blog/first-post.js
+    - localhost:3000/blog/first-post
 ### Chapter 3 기초와 내장 컴포넌트
 
 #### 3.2
