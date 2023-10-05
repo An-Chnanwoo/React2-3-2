@@ -19,7 +19,7 @@ function Highlight({code, laguge = 'js'}){
     return (
         <>
             <Head>
-                <link rel="stylesheet" href="@highlight.css"/>
+                <link rel="stylesheet" href="highlight.css"/>
             </Head>
             <pre>
                 <code className={laguge}></code>
