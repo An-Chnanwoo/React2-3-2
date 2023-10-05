@@ -8,6 +8,19 @@
 
 ## 학습내용
 
+#### 기본라우팅
+  - pages/index.js
+    localhost:3000/
+
+### Chapter 3 기초와 내장 컴포넌트
+
+#### 3.2
+
+#### 3.1 라우팅 시스템
+  - 클라이언트 라우팅만 구형
+  - Next는 파일시스템 기반 페이지와 라우팅
+  - 페이지는 /pages 디렉토리 안의 *.js , *.jsx , *.ts , *.tsx 파일에서 export한 React컴포넌트
+
 #### 2.3 정적 사이트 생성(SSG: Static Site Generation)
   - SSG는 일부, 전체 페이지를 빌드시점에 미리 렌더링
   - SSR 및 CSR과 비교했을 때 다음과 같은 장점이 있음
