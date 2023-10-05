@@ -10,7 +10,7 @@
 
 #### 기본라우팅
   - pages/index.js
-      localhost:3000/
+    - localhost:3000/
 
 ### Chapter 3 기초와 내장 컴포넌트
 
