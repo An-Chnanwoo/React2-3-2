@@ -18,9 +18,8 @@
   //중첩라우팅
   - pages/blog/first-post.js
     - localhost:3000/blog/first-post
+    
 ### Chapter 3 기초와 내장 컴포넌트
-
-#### 3.2
 
 #### 3.1 라우팅 시스템
   - 클라이언트 라우팅만 구형
