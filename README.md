@@ -6,6 +6,30 @@
 
 ## 작성코드
 
+#### ImagePage.js
+```js
+export default function ImagePage(){
+    return(
+        <>
+            <div
+                style={{
+                    width: 500,
+                    height: 200,
+                    position: 'relative'
+                }}   
+            >
+                <Image
+                    src='https://cdn.pixabay.com/photo/2023/08/16/13/06/mantis-8194123_640.jpg'
+                    layout='fill'
+                    objectFit='cover'
+                    alt='A beautiful English Setter'
+                />
+            </div>
+        </>
+    );
+}
+```
+
 #### Param.js
 ```js
 import { useRouter } from "next/router";
@@ -52,6 +76,26 @@ export default function Greet(props){
 ```
 
 ## 학습내용
+
+#### 자동 이미지 최적화
+  - Image 컴포넌트를 사용해 자동으로 최적화 가능
+  - WebP와 같은 최신 이미지 포맷으로 제공 가능
+  - png나 jpeg와 같은 예전 이미지 포맷도 제공
+  - 필요시 이미지 크기 조정 가능
+  - Unplash나 Pexel과 같은 외부 이미지
+
+#### 3.2 정적 자원 제공
+  - 정적 자원은 이미지, 폰트, 아이콘, 컴파일한 css, js등 /public 디렉토리 안에 저장
+  - 정적 자원 중 이미지 파일은 SEO에 많은 영향
+  - 볼러오는데 시간 많이 걸림, 이미지 주변의 레이아웃이 변경되는 등 UX관점에서 부정적
+  - 누적 레이아웃 이동(CLS: Cumulative Layout Shift)라고 함
+  - Image 컴포넌트룰 사용해 CLS문제 해결
+
+#### router.pusg 메서드
+  - Link 컴포넌트 대신 useRouter Hook을 사용해 다른 페이지 이동
+  - 로그인한 사용자만 접근할 수 있는 페이지를 위한 useAuth라는 훅이 있다고 가정
+  - 사용자가 로그인 하지 않았다면 useRouter 훅을 사용해서 로그인 페이지 이동
+  - router.push 메서드를 사용해 로그인 페이지 이동
 
 #### 클라이언트에서의 내비게이션(p55)
   - Link 컴포넌트를 사용해 페이지 간의 이동을 최적화
