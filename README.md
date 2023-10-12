@@ -6,7 +6,65 @@
 
 ## 작성코드
 
+#### Param.js
+```js
+import { useRouter } from "next/router";
+
+export default function Param(){
+    const {query} = useRouter();
+    console.log(query);
+    return(
+        <>
+            <h1>Hello {query.name}!</h1>
+        </>
+    )
+}
+```
+
+#### [name].js
+```js
+import Param from "@/components/Param";
+
+
+export default function Greet(){
+    return(
+        <Param/>
+    )
+}
+```
+
+#### [contents].js
+```js
+export async function getServerSideProps({params}){
+    const {contents} = params;
+    return {
+        props: {
+            contents,
+        },
+    }
+}
+
+export default function Greet(props){
+    return(
+        <h1>Hello, {props.contents}!</h1>
+    );
+}
+```
+
 ## 학습내용
+
+#### 클라이언트에서의 내비게이션(p55)
+  - Link 컴포넌트를 사용해 페이지 간의 이동을 최적화
+  - Link와 연결된 페이지는 이미 클라이언트에 다운로드 된 상태
+  - 화면 전환 속도가 빠른 이유
+  - 만일 미리 불러오는 기능을 사용하지 않는다면 preload={false} 속성을 전달하여 비활성화
+
+#### 컴포넌트에서 경로 매개변수 사용하기(p54)
+  - pages 밖에서는 getServerSideProps나 getStaticProps 함수를 사용하지 못함
+  - useRouter Hook을 이용하면 컴포넌트 안에서 경로 매개변수 사용가능
+  - useRouter는 next/router에서 가져올 수 있음
+  - useRouter Hook을 사용해 query매개변수를 가져옴
+  - greet/Mitch?foo=true로 접속하여 log 확인
 
 ## 1005(6주차)
 
