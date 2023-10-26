@@ -89,6 +89,16 @@ export default function Home() {
 
 ## 학습내용
 
+#### 3.4 _app.js와 _document.js 페이지 커스터마이징
+  - 특정작업을 처리해야 하는 경우 pages/ 디렉토리 안에 있는 app.js와 document.js를 이용
+  - [_app.js 페이지]
+    - 해당 컴포넌트와 pageProps를 반환
+    - Navbar컴포넌트 추가 시 index, about, contact페이지에 Navbar 추가 안해도 됨
+    - pages내에 모든 페이지 적용 가능
+
+  [_document.js 페이지]
+
+
 #### 공통 메타 태그
   - 복수의 페이지나 컴포넌트에서 사용하는 공통 메타 태그는 전용 컴포넌트를 만들어 관리하는 것이 좋음
 
