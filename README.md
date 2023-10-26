@@ -96,7 +96,8 @@ export default function Home() {
     - Navbar컴포넌트 추가 시 index, about, contact페이지에 Navbar 추가 안해도 됨
     - pages내에 모든 페이지 적용 가능
 
-  [_document.js 페이지]
+  - [_document.js 페이지]
+    - ///
 
 
 #### 공통 메타 태그
