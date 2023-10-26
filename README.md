@@ -6,8 +6,92 @@
 
 ## 작성코드
 
+#### Widget.js
+```js
+const { useState } = require("react");
+import Head from "next/head";
+
+
+function Widget({pageName}){
+    const [active, setActive] = useState(false);
+
+    if(active){
+        return(
+            <>
+                <Head>
+                    <title>이 페이지 타이틀은 "{pageName}" 입니다.</title>
+                </Head>
+                <div>
+                    <button onClick={() =>setActive(false)}>
+                        original title
+                    </button>
+                    Take a look at the title!
+                </div>
+            </>
+        );
+    }
+    return(
+        <>
+            <button onClick={() =>setActive(true)}>
+                Change page title
+            </button>
+        </>
+    );
+}
+
+export default Widget;
+```
+
+#### about.js
+```js
+import Navbar from "./components/Navbar";
+import Head from "next/head";
+import Widget from "./components/Widget";
+
+
+export default function Home(){
+    return(
+        <>
+            <Head>
+                <title>about 페이지</title>
+            </Head>
+            <div>
+                about.js
+            </div>
+            <Navbar/>
+            <div>
+                <Widget pageName='about'/>
+            </div>
+        </>
+    )
+}
+```
+
+#### index.js
+```js
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Head 컴포넌트에서 타이틀 추가</title>
+        
+      </Head>
+      <div>index.js</div>
+      <Navbar/>
+
+      <div>
+        <Widget pageName='index'/>
+      </div>
+    </>
+  )
+}
+```
+
 ## 학습내용
 
+#### 3.3 메타 데이터
+  - Next.js에서는 내장 Head 컴포넌트를 제공하여 메타 데이터를 쉽게 다룰 수 있음
+  - 어떤 컴포넌트에서든 HTML페이지의 <Head> 내부 데이터를 변경, 추가, 삭제 가능ㄴ
 
 ## 1012(7주차)
 
