@@ -5,7 +5,37 @@
 ## 1102(10주차)
 
 ## 작성코드
-c
+
+#### ssr-rest-api 프로젝트 생성
+
+#### index.js
+```js
+export async function getServerSideProps(){
+  // const {data} = await axios.get(`${process.env.API_ENDPOINT}/api/04/users`);
+  const usersReq = await axios.get('https://api.rwnjs.com/01/users');
+
+  return{
+    props: {
+      users: usersReq.data,
+    },
+  };
+}
+
+export default function HomePage({users}) {
+  return (
+    <ul>s
+      {users.map((user) => (
+        <li key={user.id}>
+          <link href={`/users/${user.username}`} passHref>
+            {user.username}
+          </link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+```
 ## 학습내용
 
 #### 4.2 데이터 불러오기
