@@ -8,6 +8,16 @@
 
 ## 학습내용
 
+#### 4.1.2 컴포넌트 구성
+  - atoms
+    - 코드에서 사용되는 가장 기본적인 컴포넌트
+  - molecules
+    - atoms에 속한 컴포넌트 여러 개를 조합하여 복잡한 구조를 만드는 컴포넌트
+  - organisms
+    - molecules와 atoms를 섞어 더욱 복잡한 구조를 만드는 컴포넌트
+  - templates
+    - 일종의 페이지 스켈레톤으로 organisms, molecules, atoms를 배치할지 결정해 접근하는 페이지 만듬
+
 #### 4.1 디렉토리 구조 구성
 ```js
 next-js-app
