@@ -8,6 +8,16 @@
 
 ## 학습내용
 
+#### 4.1 디렉토리 구조 구성
+```js
+next-js-app
+  - node_modules/
+  - package.json
+  - pages/
+  public/
+  - styles/
+```
+
 ## 1026(9주차)
 
 ## 작성코드
