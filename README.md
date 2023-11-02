@@ -14,7 +14,7 @@ next-js-app
   - node_modules/
   - package.json
   - pages/
-  public/
+  - public/
   - styles/
 ```
 
