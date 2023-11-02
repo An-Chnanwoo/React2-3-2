@@ -16,8 +16,6 @@ export default function Home() {
         
       </Head>
       <div>index.js</div>
-      <Navbar/>
-
       <div>
         <Widget pageName='index'/>
       </div>

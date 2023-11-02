@@ -2,9 +2,69 @@
 
 # 안찬우(201830220)
 
+## 1102(10주차)
+
+## 작성코드
+
+## 학습내용
+
 ## 1026(9주차)
 
 ## 작성코드
+
+#### _app.js
+```js
+import Navbar from './components/Navbar'
+import '@/styles/globals.css'
+import ThemeContext from './components/themeContext'
+import { useState } from 'react';
+
+const themes = {
+  dark: {
+    background: 'black',
+    color: 'white'
+  },
+  light: {
+    background: 'white',
+    color: 'dark'
+  }
+};
+
+export default function App({ Component, pageProps }) {
+  const [theme, setTheme] = useState('light')
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  };
+
+  return (
+    <>
+      <ThemeContext.Provider value={{theme, toggleTheme}}>
+        <div
+          style={{
+            width: '100%',
+            minHeight: '100vh',
+            ...themes[theme]
+          }}>
+          <Navbar/>
+          <Component {...pageProps}/>
+        </div>
+      </ThemeContext.Provider>
+    </>
+  );
+}
+```
+
+#### themeContext.js
+```js
+import { createContext } from "react";
+
+const ThemeContext = createContext({
+    theme: 'light',
+    toggleTheme: () => null
+});
+
+export default ThemeContext;
+```
 
 #### Widget.js
 ```js
@@ -89,6 +149,9 @@ export default function Home() {
 
 ## 학습내용
 
+#### Dark mode와 Light mode를 _app.js에 적용하기
+  - p78~80 code 참조
+
 #### 3.4 _app.js와 _document.js 페이지 커스터마이징
   - 특정작업을 처리해야 하는 경우 pages/ 디렉토리 안에 있는 app.js와 document.js를 이용
   - [_app.js 페이지]
@@ -97,7 +160,7 @@ export default function Home() {
     - pages내에 모든 페이지 적용 가능
 
   - [_document.js 페이지]
-    - ///
+    - p81 code 및 설명 참조
 
 
 #### 공통 메타 태그

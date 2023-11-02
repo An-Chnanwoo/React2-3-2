@@ -12,7 +12,6 @@ export default function Home(){
             <div>
                 about.js
             </div>
-            <Navbar/>
             <div>
                 <Widget pageName='about'/>
             </div>
