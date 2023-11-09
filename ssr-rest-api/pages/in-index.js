@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export async function getServerSideProps(){
   // const {data} = await axios.get(`${process.env.API_ENDPOINT}/api/04/users`);
-  const usersReq = await axios.get('https://jsonplaceholder.typicode.com/users');
-  //https://api.rwnjs.com/01/users
+  const usersReq = await axios.get('https://api.rwnjs.com/01/users');
+  //https://jsonplaceholder.typicode.com/users
 
   return{
     props: {
