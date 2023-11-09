@@ -6,7 +6,25 @@
 
 ## 작성코드
 
+#### user.json
+  - https://github.com/hanbit/practical-next.js
+
+#### .env
+```js
+API_TOKEN=realworldextjs
+API_ENDPOINT=http://localhost:3000
+```
+
 ## 학습내용
+
+#### 4.2.3 서버에서 REST API 사용하기
+  - public API를 호출할 것인지 private API를 호출할 것인지 먼저 확인
+  - Public API는 인증이나 권한 없이 호출 가능
+
+#### 4.2.2 서버가 데이터 불러오기
+  - 서버에서는 두 가지 방법으로 HTTP 요청을 만들고 처리 가능
+    - 1. Node의 내장 HTTP 라이브러리를 사용 가능
+    - 2. HTTP클라이언트 라이브러리 사용 가능
 
 ## 1102(10주차)
 
