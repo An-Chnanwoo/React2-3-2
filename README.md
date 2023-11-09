@@ -6,6 +6,32 @@
 
 ## 작성코드
 
+#### csr-rest-api 프로젝트 생성
+
+#### singleUser.js
+```js
+import axios from 'axios';
+
+export default async function handler(req, res) {
+  if (!req.query.username) {
+    res.status(403).json({
+      error: 'Missing "username" query parameter',
+    });
+    return;
+  }
+
+  const username = req.query.username;
+  const API_ENDPOINT = process.env.API_ENDPOINT;
+  const API_TOKEN = process.env.API_TOKEN;
+
+  const userReq = await axios.get(`${API_ENDPOINT}/api/04/users/${username}`, {
+    headers: { authorization: API_TOKEN },
+  });
+
+  res.status(200).json(userReq.data);
+}
+```
+
 #### user.json
   - https://github.com/hanbit/practical-next.js
 
@@ -16,6 +42,10 @@ API_ENDPOINT=http://localhost:3000
 ```
 
 ## 학습내용
+
+#### csr-rest-api 프로젝트의 문제점
+  1. 교차 출처 리소스 공유 는 브라우저에서 제공하는 보안 기능으로 클라이언트->서버의 경우 문제 발생
+  2. 클라이언트에 인증 토큰을 노출
 
 #### 클라이언트에서 REST API 사용하기
   - 클라이언트는 주로 두 가지 시점에 데이터를 불러옴
