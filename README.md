@@ -7,6 +7,87 @@
 ## 작성코드
 
 #### signbook 프로젝트 생성
+  -  의존성 패키지 추가 npm i @apollo/client graphql isomorphic-unfetch
+
+#### getLatestSigns.js
+```js
+import { gql } from '@apollo/client';
+
+const GET_LATEST_SIGNS = gql`
+  query GetLatestSigns($limit: Int! = 10, $skip: Int! = 0) {
+    sign(offset: $skip, limit: $limit, order_by: { created_at: desc }) {
+      uuid
+      created_at
+      content
+      nickname
+      country
+    }
+  }
+`;
+
+export default GET_LATEST_SIGNS;
+
+```
+
+#### _app.js
+```js
+import '@/styles/globals.css'
+import Head from 'next/head';
+import { ApolloProvider } from '@apollo/client';
+import { useApollo } from '../lib/apollo';
+
+export default function App({ Component, pageProps }) {
+  const apolloClient = useApollo(pageProps.initialApolloState || {});
+  return (
+    <ApolloProvider client={apolloClient}>
+      <Head>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+      </Head>
+      <Component {...pageProps} />
+    </ApolloProvider>
+  )
+}
+```
+
+#### index.js
+```js
+import { useMemo } from 'react';
+import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
+
+let uri = '/api/graphql';
+let apolloClient;
+
+function createApolloClient() {
+  return new ApolloClient({
+    ssrMode: typeof window === 'undefined',
+    link: new HttpLink({uri}),
+    cache: new InMemoryCache(),
+  });
+}
+
+export function initApollo(initialState = null) {
+  const client = apolloClient || createApolloClient();
+
+  if (initialState) {
+    const existingCache = client.extract();
+    client.cache.restore({ ...existingCache, ...initialState });
+  }
+
+  if (typeof window === 'undefined') {
+    return client;
+  }
+
+  if (!apolloClient) {
+    apolloClient = client;
+  }
+
+  return client;
+}
+
+export function useApollo(initialState) {
+  return useMemo(() => initApollo(initialState), [initialState]);
+}
+```
 
 ## 학습내용
 
