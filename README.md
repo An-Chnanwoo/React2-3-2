@@ -6,11 +6,16 @@
 
 ## 작성코드
 
+
 ## 학습내용
 
 ## 1116(12주차)
 
 ## 작성코드
+
+## npm install graphql-type-json
+
+## npm install apollo-server-micro
 
 #### signbook 프로젝트 생성
   -  의존성 패키지 추가 npm i @apollo/client graphql isomorphic-unfetch
