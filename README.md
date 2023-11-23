@@ -6,6 +6,9 @@
 
 ## 작성코드
 
+#### boilerplate 프로젝트 생성
+
+
 #### addSign.js
 ```js
 import { gql } from '@apollo/client';
@@ -105,6 +108,9 @@ export default NewSign;
 ```
 
 ## 학습내용
+
+#### 콘텍스트 API
+  - 특정 콘텍스트 내의 모든 컴포넌트 간에 데이터를 공유할 수 있음
 
 #### 5.2 전역 상태 관리
   - 여러 컴포넌트가 공유하는 상태
