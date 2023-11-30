@@ -8,10 +8,13 @@
 
 ## 학습내용
 
+#### Reducer
+  - 프로젝트 관리를 위해 많은 파일에서 여러 개의 reducer를 만들지만 여기에서는 하나만 사용
+
 #### Redux
   - 미들웨어 없이 Redux를 리액트 콘텍스트 API 대신 사용
   - 패키지 설치 $ npm i redux react-redux
-  - npm i redux-devtools-extension
+  - 디버깅 $ npm i redux-devtools-extension
 
 ## 1123(13주차)
 
