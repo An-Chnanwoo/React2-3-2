@@ -8,6 +8,11 @@
 
 ## 학습내용
 
+#### Redux
+  - 미들웨어 없이 Redux를 리액트 콘텍스트 API 대신 사용
+  - 패키지 설치 $ npm i redux react-redux
+  - npm i redux-devtools-extension
+
 ## 1123(13주차)
 
 ## 작성코드

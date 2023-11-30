@@ -7,7 +7,7 @@ function getFullItem(id) {
   return data[idx];
 }
 
-function Cart() {
+export default function Cart() {
   const { items } = useContext(cartContext);
   const total = Object.keys(items)
     .map((id) => getFullItem(id).price * items[id])
@@ -31,5 +31,3 @@ function Cart() {
     </div>
   );
 }
-
-export default Cart;
