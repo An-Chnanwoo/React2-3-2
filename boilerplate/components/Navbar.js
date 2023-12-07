@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import Link from 'next/link';
 import cartContext from '../components/context/cartContext';
 
-function Navbar() {
+export default function Navbar() {
   const { items } = useContext(cartContext);
   const totalItemsAmount = Object.values(items).reduce((x, y) => x + y, 0);
 
@@ -23,5 +23,3 @@ function Navbar() {
     </div>
   );
 }
-
-export default Navbar;
